@@ -7,6 +7,7 @@ $longeurdeux = 0  ;
  $longueur = count($tri);
  $compteur = 0;
  $pluspetit = 0;
+
 do {
     $check = 0;
     $pluspetit = 0;
@@ -20,8 +21,6 @@ do {
                 $longeurMot = strlen($tri[$i+1]);
             }
         }
-        
-        
         for ($j=0; $j < $longeurMot; $j++) 
         {
             if ($i< $longueur-1) {
@@ -30,13 +29,10 @@ do {
                         $mot = $tri[$i];
                         $tri[$i] = $tri[$i+1];
                         $tri[$i+1] = $mot;
-                        $check = 1;
-                        
-                        
+                        $check = 1;       
            }
           else if ($tri[$i][$j] < $tri[$i+1][$j] && $check != 1) {
             $pluspetit = 1;
-          
            }
            elseif ($tri[$i][$j] == $tri[$i+1][$j] && $j == strlen($tri[$i+1])-1){
             $mot = $tri[$i];
@@ -45,21 +41,12 @@ do {
                         $check = 1;
            }
             }
-           
-           
-       
         }
     } 
-    $compteur++;
-   
+    $compteur++;  
 } while ($check != 0 || $compteur != count($tri) );
-
 echo "<br>";
 for ($i=0; $i < count($tri) ; $i++) { 
-
     echo " ". $tri[$i]. " ";
 }
-
-
-
 ?>
