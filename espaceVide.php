@@ -3,7 +3,7 @@
  $nouveau;
  $compteur = 0;
  $compteurDeux =0;
-$check = 0;
+ $check = 0;
 
 if ( $mot[strlen($mot)-1 ]== " ")    
     for ($i=strlen($mot)-1; $i >0 ; $i--) 
