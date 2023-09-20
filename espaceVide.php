@@ -2,7 +2,7 @@
 
 echo "miamlemiel";
 
-
+echo "miamlemiel";
  $mot="espace ";
  $nouveau;
  $compteur = 0;
