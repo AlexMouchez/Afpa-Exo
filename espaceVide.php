@@ -1,6 +1,22 @@
 <?php
 
 echo "miamlemiel";
-echo "miamlelait";
-echo "miamlemiam";
+
+
+ $mot="espace ";
+ $nouveau;
+ $compteur = 0;
+ $compteurDeux;
+
+do {
+    if ($mot[strlen($mot)-1] = ' ') {
+        while($compteur <> strlen($mot)-1-$compteurDeux){
+            $nouveau[$compteur] = $mot[$compteur];
+            $compteur++;
+        }
+        $compteurDeux++;
+    }
+} while ($nouveau[count($nouveau)-1] = ''); 
+echo $nouveau;
+echo"a";
 ?>
