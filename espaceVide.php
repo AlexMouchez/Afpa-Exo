@@ -18,4 +18,5 @@ do {
     }
 } while ($nouveau[count($nouveau)-1] = ''); 
 echo $nouveau;
+echo"a";
 ?>
