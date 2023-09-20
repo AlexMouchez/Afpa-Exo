@@ -1,5 +1,5 @@
 <?php
- $mot=" ";
+ $mot=" dzaz  azdaz  ";
  $nouveau;
  $compteur = 0;
  $compteurDeux =0;
