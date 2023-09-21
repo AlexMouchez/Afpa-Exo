@@ -58,13 +58,11 @@ function changement($tab,$placementPivot,$nvPivot)
      $changement = $tab[$placementPivot];
 $tab[$placementPivot] = $tab[$nvPivot];
 $tab[$nvPivot] = $changement;
-echo ("<br>");
 $tab = Tritableau($tab,$placementPivot);
 return $tab;
 }
 
-
-$tab=[0,999,9999,12,75,48,9666,112,75,48,9666,1,450,999,9999,0,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,12,0,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,75,480,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,9666,112,75,48,9666,1,45,0];
+$tab=[0,9999666,112,75,48,9666,1,45,0];
 $tab2 = array();
 $rand;
 $ancienPivot;
@@ -85,7 +83,6 @@ $tab = Changement($tab,$placementPivot,$rand );				//Placement d'un pivot random
 $tab = Tritableau($tab,$placementPivot);				//Tri par rapport a mon pivot(2 groupes(<= et >))
 
         $nvPivot = DeplacementPivot($tab, $placementPivot);	//Calcul du nouveau pivot
-        echo $tab[$nvPivot];
         $tab = Changement($tab,$placementPivot,$nvPivot); //déplacement effectif du pivot ancien avec le nouveau
         $ancienPivot= $nvPivot-1;
 while ($nvPivot != count($tab)) {
@@ -109,8 +106,7 @@ while ($nvPivot != count($tab)) {
        $nvPivot = $ancienPivot;
        $compteurdeux++;
 }
-
-echo ("<br>");
+echo ("<br> Fin");
 for ($j = 0; $j < count($tab) ; $j++) 
         { 
             echo (" " . $tab[$j] . " ");
