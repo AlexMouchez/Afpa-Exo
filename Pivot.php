@@ -13,7 +13,7 @@ while ($compteur != 0 )
         {
             for ($j=$i + 1; $j < $placementPivot ; $j++) 
             {  
-                if ($tab[$i] > $tab[$j] && $tab[$j] <= $tab[$placementPivot]) 
+                if ($tab[$i] >= $tab[$j] && $tab[$j] <= $tab[$placementPivot]) 
                 {
                     echo (" <br> Pivot : -----" . $tab[$placementPivot] . " -------");
                     $rangement = $tab[$j];
@@ -59,15 +59,12 @@ function changement($tab,$placementPivot,$nvPivot)
 $tab[$placementPivot] = $tab[$nvPivot];
 $tab[$nvPivot] = $changement;
 echo ("<br>");
-for ($i=0; $i < count($tab) ; $i++) { 
-    echo (" " . $tab[$i] . " ");    	
-}
 $tab = Tritableau($tab,$placementPivot);
 return $tab;
 }
 
 
-$tab=[9999,12,75,48,9666,112,75,48,9666,1,45,0];
+$tab=[0,999,9999,12,75,48,9666,112,75,48,9666,1,450,999,9999,0,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,12,0,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,75,480,999,9999,12,75,48,9666,112,75,48,9666,1,45,0,9666,112,75,48,9666,1,45,0];
 $tab2 = array();
 $rand;
 $ancienPivot;
@@ -89,7 +86,7 @@ $tab = Tritableau($tab,$placementPivot);				//Tri par rapport a mon pivot(2 grou
         $nvPivot = DeplacementPivot($tab, $placementPivot);	//Calcul du nouveau pivot
         echo $tab[$nvPivot];
         $tab = Changement($tab,$placementPivot,$nvPivot); //déplacement effectif du pivot ancien avec le nouveau
-        $ancienPivot= $nvPivot;
+        $ancienPivot= $nvPivot-1;
 while ($nvPivot != count($tab)) {
     for ($i = 0; $i <count($tab) ; $i++) 
        { 
@@ -110,6 +107,7 @@ while ($nvPivot != count($tab)) {
        $ancienPivot++;
        $nvPivot = $ancienPivot;
 }
+
 echo ("<br>a<br>");
 for ($j = 0; $j < count($tab) ; $j++) 
         { 
