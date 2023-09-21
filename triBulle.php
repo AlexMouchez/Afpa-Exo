@@ -14,7 +14,7 @@ do {
     }
     
 } while ($check == 1);
-for ($i=0; $i < count($tri) - 1 ; $i++) { 
+for ($i = 0; $i < count($tri) - 1 ; $i++) { 
     echo $tri[$i] . " ";
 }
 ?>
