@@ -3,5 +3,5 @@ $alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r
 $lettre = "z";
 $compteur = 0;
 while ($lettre != $alpha[$compteur++]);
-echo("vootre lettre est en position " . $compteur);
+echo("votre lettre est en position " . $compteur);
 ?>
